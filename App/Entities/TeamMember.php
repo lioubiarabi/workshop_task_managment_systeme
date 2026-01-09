@@ -8,7 +8,7 @@ abstract class TeamMember
         private string $email,
         private string $passwordHash,
         private string $teamId,
-        private string $createdAt
+        private DateTime $createdAt
     ) {}
 
     abstract public function canCreateProject(): bool;
@@ -20,8 +20,5 @@ abstract class TeamMember
         return password_verify($password, $this->passwordHash);
     }
 
-    public function setPassword(string $password): void
-    {
-        $this->passwordHash = password_hash($password, PASSWORD_DEFAULT);
-    }
+    public function setPassword(string $password): void {}
 }

@@ -19,5 +19,5 @@ abstract class Task
     ) {}
 
     abstract function calculateComplexity();
-    abstract function getRequiredSkills();
+    abstract function getRequiredSkills(): array;
 }
