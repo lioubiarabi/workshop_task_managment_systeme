@@ -1,6 +1,6 @@
 <?php
 
-class Task
+abstract class Task
 {
     public function __construct(
         private int $id,
@@ -17,4 +17,7 @@ class Task
         private DateTime $createdAt,
         private DateTime $updatedAt
     ) {}
+
+    abstract function calculateComplexity();
+    abstract function getRequiredSkills();
 }
